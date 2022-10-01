@@ -2,10 +2,15 @@ import React from 'react';
 
 class Nav extends React.Component {
     render() {
-        let nav = [1, 2, 3];
+        let nav = this.props.nav;
+
         return (
             <nav>
-                {nav.map(value => <li>{value}</li>)}
+                <ul>
+                    {Object.keys(nav).map(value => {
+                    return <li><a href="{nav[value]}">{value}</a></li>
+                })}
+                </ul>
             </nav>
         )
     }

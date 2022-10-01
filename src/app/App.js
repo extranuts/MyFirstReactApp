@@ -8,10 +8,15 @@ import Nav from "../nav/Nav"
 
 class App extends React.Component {
     render() {
+        let nav = {
+            "main": '/index',
+            "about": '/about',
+            "price": 'buy/price'
+        }
         return (
             <div className="App">
                 <Header/>
-                <Nav/>
+                <Nav nav = {nav} />
                 <Main/>
                 <Footer/>
             </div>
